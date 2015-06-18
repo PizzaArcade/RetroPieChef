@@ -1,0 +1,11 @@
+{
+  "name": "TFTTEST",
+  "description": "Install some stuff",
+  "override_attributes": {
+    "emulationstation": {
+        "rom_path": "/opt/roms",
+        "autostart": "true"
+    }
+  },
+  "run_list": ["recipe[emulationstation]"]
+}
