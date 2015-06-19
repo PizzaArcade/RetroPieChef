@@ -10,7 +10,6 @@ role_path        "/var/chef/RetroPieChef/roles"
 checksum_path    "/var/chef/checksums"
 file_backup_path "/var/chef/backup"
 file_cache_path  "/var/chef/cache"
-json_attribs nil
 lockfile nil
 log_level :info
 log_location STDOUT
