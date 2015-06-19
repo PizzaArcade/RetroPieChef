@@ -1,9 +1,9 @@
-node_name "retro-pie"
+node_name "PITFT"
+cookbook_path    "/var/chef/RetroPieChef/cookbooks"
+role_path        "/var/chef/RetroPieChef/roles"
 checksum_path    "/var/chef/checksums"
-cookbook_path    "/var/chef/cookbooks"
 file_backup_path "/var/chef/backup"
 file_cache_path  "/var/chef/cache"
-role_path        "/var/chef/roles"
 json_attribs nil
 lockfile nil
 log_level :info
