@@ -1,0 +1,13 @@
+name "retropi"
+description "Installs and configures emulators fronted by emulationstation"
+ 
+run_list(
+  "recipe[emulationstation]",
+  "recipe[dgen]"
+)
+default_attributes(
+  "emulationstation": {
+    "rom_path": "/opt/roms",
+    "autostart": "true"
+  }
+)
