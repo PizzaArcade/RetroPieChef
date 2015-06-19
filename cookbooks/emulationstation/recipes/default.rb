@@ -8,7 +8,6 @@
 #
 
 # add PizzaArcade repo
-
 cookbook_file "/etc/apt/sources.list.d/pizzaarcade.list" do
   action :create
   owner "root"
@@ -17,7 +16,6 @@ cookbook_file "/etc/apt/sources.list.d/pizzaarcade.list" do
   source "etc/apt/sources.list.d/pizzaarcade.list"
   notifies :run, "execute[apt-get-update]", :immediately
 end
-
 execute "apt-get-update" do
   command "apt-get update"
   action :nothing
@@ -25,8 +23,6 @@ end
 
 ##
 # es dependencies
-##
-
 package "libboost-system1.49.0"
 package "libboost-filesystem1.49.0"
 package "libboost-date-time1.49.0"
@@ -35,3 +31,7 @@ package "libfreeimage3"
 package "sdl2"
 
 package "emulationstation"
+
+##
+# Set up systems
+include_recipe 'emulationstation::systems'
